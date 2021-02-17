@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="sk.fri.robertkubinec.game">
+  <ClassDiagramComponents>
+    <Class name="Had" package="sk.fri.robertkubinec.game" visibility="public" xPosition="12.0" yPosition="4.0">
+      <Fields>
+        <Field name="had" type="ArrayList&lt;JednoPolicko&gt;" visibility="private"/>
+        <Field name="smer" type="SmerHadika" visibility="private"/>
+        <Field name="rychlost" type="float" visibility="private"/>
+        <Field name="zjedene" type="boolean" visibility="private"/>
+        <Field name="hra" type="ObrazovkaHry" visibility="private"/>
+        <Field name="koniec" type="Texture" visibility="private"/>
+        <Field name="koniecHry" type="boolean" visibility="private"/>
+        <Field name="skore" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="ObrazovkaHry" name="hra"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getHad" returnType="ArrayList&lt;JednoPolicko&gt;" visibility="public"/>
+        <Method name="getSmer" returnType="SmerHadika" visibility="public"/>
+        <Method name="setHad" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;JednoPolicko&gt;" name="had"/>
+        </Method>
+        <Method name="setSmer" returnType="void" visibility="public">
+          <Argument type="SmerHadika" name="smer"/>
+        </Method>
+        <Method name="vykresli" returnType="void" visibility="public">
+          <Argument type="SpriteBatch" name="batch"/>
+        </Method>
+        <Method name="pohniSa" returnType="void" visibility="public"/>
+        <Method name="isKoniecHry" returnType="boolean" visibility="public"/>
+        <Method name="getRychlost" returnType="float" visibility="public"/>
+        <Method name="predlzSa" returnType="void" visibility="public">
+          <Argument type="Jedlo" name="ceresna"/>
+        </Method>
+        <Method name="getSkore" returnType="int" visibility="public"/>
+        <Method name="zrychli" returnType="void" visibility="public"/>
+        <Method name="spomal" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="HlavaHadika" package="sk.fri.robertkubinec.game" visibility="public" xPosition="812.0" yPosition="461.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="poziciaX"/>
+          <Argument type="int" name="poziciaY"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Hra" package="sk.fri.robertkubinec.game" visibility="public" xPosition="251.0" yPosition="545.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="create" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Blesk" package="sk.fri.robertkubinec.game.jedlo" visibility="public" xPosition="847.0" yPosition="4.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="poziciaX"/>
+          <Argument type="int" name="poziciaY"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Ceresna" package="sk.fri.robertkubinec.game.jedlo" visibility="public" xPosition="831.0" yPosition="118.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="poziciaX"/>
+          <Argument type="int" name="poziciaY"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Jablko" package="sk.fri.robertkubinec.game.jedlo" visibility="public" xPosition="843.0" yPosition="234.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="poziciaX"/>
+          <Argument type="int" name="poziciaY"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Slimak" package="sk.fri.robertkubinec.game.jedlo" visibility="public" xPosition="843.0" yPosition="349.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="poziciaX"/>
+          <Argument type="int" name="poziciaY"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Jedlo" package="sk.fri.robertkubinec.game" visibility="public" xPosition="510.0" yPosition="4.0">
+      <Fields>
+        <Field name="poziciaX" type="int" visibility="private"/>
+        <Field name="poziciaY" type="int" visibility="private"/>
+        <Field name="obrazok" type="Texture" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="poziciaX"/>
+          <Argument type="int" name="poziciaY"/>
+          <Argument type="Texture" name="obrazok"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPoziciaX" returnType="int" visibility="public"/>
+        <Method name="getPoziciaY" returnType="int" visibility="public"/>
+        <Method name="setPoziciaX" returnType="void" visibility="public">
+          <Argument type="int" name="poziciaX"/>
+        </Method>
+        <Method name="setPoziciaY" returnType="void" visibility="public">
+          <Argument type="int" name="poziciaY"/>
+        </Method>
+        <Method name="vykresli" returnType="void" visibility="public">
+          <Argument type="SpriteBatch" name="batch"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="JednoPolicko" package="sk.fri.robertkubinec.game" visibility="public" xPosition="474.0" yPosition="336.0">
+      <Fields>
+        <Field name="poziciaX" type="int" visibility="private"/>
+        <Field name="poziciaY" type="int" visibility="private"/>
+        <Field name="obrazok" type="Texture" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="poziciaX"/>
+          <Argument type="int" name="poziciaY"/>
+          <Argument type="Texture" name="obrazok"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPoziciaX" returnType="int" visibility="public"/>
+        <Method name="getPoziciaY" returnType="int" visibility="public"/>
+        <Method name="getObrazok" returnType="Texture" visibility="public"/>
+        <Method name="setPoziciaX" returnType="void" visibility="public">
+          <Argument type="int" name="poziciaX"/>
+        </Method>
+        <Method name="setPoziciaY" returnType="void" visibility="public">
+          <Argument type="int" name="poziciaY"/>
+        </Method>
+        <Method name="setObrazok" returnType="void" visibility="public">
+          <Argument type="Texture" name="obrazok"/>
+        </Method>
+        <Method name="pohniSa" returnType="void" visibility="public">
+          <Argument type="int" name="poziciaX"/>
+          <Argument type="int" name="poziciaY"/>
+        </Method>
+        <Method name="vykresli" returnType="void" visibility="public">
+          <Argument type="SpriteBatch" name="batch"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ObrazovkaHry" package="sk.fri.robertkubinec.game" visibility="public" xPosition="287.0" yPosition="4.0">
+      <Fields>
+        <Field name="SIRKA" type="int" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="VYSKA" type="int" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="batch" type="SpriteBatch" visibility="private"/>
+        <Field name="batch2" type="SpriteBatch" visibility="private"/>
+        <Field name="pozadie" type="Texture" visibility="private"/>
+        <Field name="koniec" type="Texture" visibility="private"/>
+        <Field name="hudba" type="Music" visibility="private"/>
+        <Field name="had" type="Had" visibility="private"/>
+        <Field name="cas" type="float" visibility="private"/>
+        <Field name="zjedene" type="int" visibility="private"/>
+        <Field name="jedlo" type="ArrayList&lt;Jedlo&gt;" visibility="private"/>
+        <Field name="text" type="BitmapFont" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="render" returnType="void" visibility="public">
+          <Argument type="float" name="delta"/>
+        </Method>
+        <Method name="pridajJedlo" returnType="void" visibility="public"/>
+        <Method name="getJedlo" returnType="ArrayList&lt;Jedlo&gt;" visibility="public"/>
+        <Method name="dispose" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="TeloHadika" package="sk.fri.robertkubinec.game" visibility="public" xPosition="815.0" yPosition="574.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="poziciaX"/>
+          <Argument type="int" name="poziciaY"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Enum name="SmerHadika" package="sk.fri.robertkubinec.game" visibility="public" xPosition="35.0" yPosition="513.0">
+      <Literals>
+        <Literal name="DOHORA"/>
+        <Literal name="DODOLA"/>
+        <Literal name="DOLAVA"/>
+        <Literal name="DOPRAVA"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="sk.fri.robertkubinec.game.jedlo.Ceresna" target="sk.fri.robertkubinec.game.Jedlo"/>
+    <IsRelation name="is" source="sk.fri.robertkubinec.game.jedlo.Jablko" target="sk.fri.robertkubinec.game.Jedlo"/>
+    <IsRelation name="is" source="sk.fri.robertkubinec.game.jedlo.Slimak" target="sk.fri.robertkubinec.game.Jedlo"/>
+    <HasRelation name="jedlo" source="sk.fri.robertkubinec.game.ObrazovkaHry" target="sk.fri.robertkubinec.game.Jedlo" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Jedlo&gt;"/>
+    <UseRelation source="sk.fri.robertkubinec.game.Had" target="sk.fri.robertkubinec.game.Jedlo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="hra" source="sk.fri.robertkubinec.game.Had" target="sk.fri.robertkubinec.game.ObrazovkaHry" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="sk.fri.robertkubinec.game.Had" target="sk.fri.robertkubinec.game.SmerHadika" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="sk.fri.robertkubinec.game.Had" target="sk.fri.robertkubinec.game.JednoPolicko" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="had" source="sk.fri.robertkubinec.game.ObrazovkaHry" target="sk.fri.robertkubinec.game.Had" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="had" source="sk.fri.robertkubinec.game.Had" target="sk.fri.robertkubinec.game.JednoPolicko" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;JednoPolicko&gt;"/>
+    <IsRelation name="is" source="sk.fri.robertkubinec.game.HlavaHadika" target="sk.fri.robertkubinec.game.JednoPolicko"/>
+    <IsRelation name="is" source="sk.fri.robertkubinec.game.Jedlo" target="sk.fri.robertkubinec.game.JednoPolicko"/>
+    <IsRelation name="is" source="sk.fri.robertkubinec.game.TeloHadika" target="sk.fri.robertkubinec.game.JednoPolicko"/>
+    <UseRelation source="sk.fri.robertkubinec.game.ObrazovkaHry" target="sk.fri.robertkubinec.game.Jedlo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="sk.fri.robertkubinec.game.jedlo.Blesk" target="sk.fri.robertkubinec.game.Jedlo"/>
+    <HasRelation name="smer" source="sk.fri.robertkubinec.game.Had" target="sk.fri.robertkubinec.game.SmerHadika" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
